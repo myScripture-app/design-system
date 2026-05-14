@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>myScripture Notes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --background: rgb(249 248 246); --foreground: rgb(33 35 44);
+  --card: rgb(253 253 252); --muted-fg: rgb(108 112 127);
+  --border-color: rgb(226 222 217); --primary: rgb(70 114 93);
+  --sage-light: rgb(231 239 235); --warm: rgb(197 132 58);
+  --warm-light: rgb(246 239 228); --navy: rgb(40 57 93);
+  --navy-light: rgb(236 239 245);
+  --shadow-card: 0 12px 34px rgba(56,48,35,0.06), 0 1px 3px rgba(56,48,35,0.04);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--background); color: var(--foreground); font-family: 'DM Sans', system-ui, sans-serif; }
+.mini-nav { background: rgba(249,248,246,0.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); padding: 0 32px; height: 52px; display: flex; align-items: center; gap: 16px; position: sticky; top: 0; z-index: 10; }
+.mini-nav a { font-size: 13px; color: var(--muted-fg); text-decoration: none; }
+.mini-nav a:hover { color: var(--foreground); }
+.mini-nav .logo { font-family: 'Lora', Georgia, serif; font-size: 15px; font-weight: 600; color: var(--foreground); }
+.hero { max-width: 800px; margin: 0 auto; padding: 80px 32px 64px; }
+.section-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); margin-bottom: 16px; }
+h1 { font-family: 'Lora', Georgia, serif; font-weight: 600; font-size: 3rem; letter-spacing: -0.015em; line-height: 1.15; margin-bottom: 16px; }
+.tagline { font-size: 1.125rem; color: var(--muted-fg); line-height: 1.7; margin-bottom: 24px; max-width: 560px; }
+.chip { display: inline-flex; align-items: center; gap: 5px; padding: 4px 12px; border-radius: 9999px; font-size: 12px; font-weight: 500; margin-bottom: 32px; }
+.chip-sage  { background: var(--sage-light);  color: var(--primary); border: 1px solid rgba(70,114,93,0.18); }
+.chip-amber { background: var(--warm-light);  color: var(--warm);    border: 1px solid rgba(197,132,58,0.2); }
+.chip-navy  { background: var(--navy-light);  color: var(--navy);    border: 1px solid rgba(40,57,93,0.15); }
+.chip-muted { background: rgb(241 240 238);   color: var(--muted-fg); border: 1px solid var(--border-color); }
+.dot { width: 6px; height: 6px; border-radius: 50%; }
+.dot-sage{background:var(--primary)} .dot-amber{background:var(--warm)} .dot-navy{background:var(--navy)} .dot-muted{background:var(--muted-fg)}
+.content { max-width: 800px; margin: 0 auto; padding: 0 32px 80px; }
+.desc { font-size: 1rem; line-height: 1.8; color: var(--foreground); margin-bottom: 40px; max-width: 640px; }
+.features-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); margin-bottom: 16px; }
+.features { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 40px; }
+.features li { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; }
+.features li::before { content: "✓"; color: var(--primary); font-weight: 600; margin-top: 1px; flex-shrink: 0; }
+.audience { font-size: 14px; color: var(--muted-fg); margin-bottom: 32px; }
+.audience strong { color: var(--foreground); }
+.cta { background: var(--primary); color: white; border: none; border-radius: 9999px; padding: 11px 24px; font-family: 'DM Sans', system-ui, sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; text-decoration: none; display: inline-block; }
+.cta:hover { background: rgb(57 96 78); }
+  </style>
+</head>
+<body>
+  <div class="mini-nav">
+    <span class="logo">myScripture</span>
+    <span style="color:var(--border-color)">·</span>
+    <a href="../products/">← All products</a>
+  </div>
+  <div class="hero">
+    <p class="section-label">Product</p>
+    <h1>myScripture Notes</h1>
+    <p class="tagline">Remember what God is teaching you.</p>
+    <div><span class="chip chip-sage"><span class="dot dot-sage"></span>Available now</span></div>
+  </div>
+  <div class="content">
+    <p class="desc">A focused space for sermon notes, Bible study reflections, Scripture insights, personal application, and prayer responses. Notes are organized by passage, pastor, church, series, and topic — and are private by default.</p>
+    <p class="features-label">Features</p>
+    <ul class="features">
+      <li>Structured sermon note templates</li>
+      <li>Bible study notes and reflections</li>
+      <li>Organize by passage, pastor, church, and series</li>
+      <li>Tags and themes</li>
+      <li>Personal application and prayer response sections</li>
+      <li>Search your full library</li>
+      <li>Private by default, shareable by choice</li>
+    </ul>
+    <p class="audience"><strong>For:</strong> Individual Christians, Bible students, and small group members</p>
+    <a class="cta" href="#">Learn about Notes</a>
+  </div>
+</body>
+</html>
