@@ -1,0 +1,35 @@
+/* myScripture Design Tokens — Spacing, Radius, Shadows */
+
+:root {
+  /* Spacing — 4px base unit */
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:  12px;
+  --space-4:  16px;   /* default card padding (mobile) */
+  --space-5:  20px;
+  --space-6:  24px;   /* card padding (desktop) */
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;   /* section vertical padding */
+
+  /* Border radius */
+  --radius-xs:   6px;      /* inline tags */
+  --radius-sm:   8px;      /* inputs, small buttons */
+  --radius-md:  12px;      /* small cards, icon containers */
+  --radius-lg:  14px;      /* standard cards (rounded-2xl) */
+  --radius-xl:  16px;      /* main content cards */
+  --radius-pill: 9999px;   /* buttons, chips, badges, avatars */
+
+  /* Shadows — warm brown undertones, never cold grey */
+  --shadow-sm:   0 1px 4px rgba(56,48,35,0.06);
+  --shadow-card: 0 12px 34px rgba(56,48,35,0.06), 0 1px 3px rgba(56,48,35,0.04);
+  --shadow-lg:   0 16px 48px rgba(56,48,35,0.10), 0 4px 12px rgba(56,48,35,0.06);
+
+  /* Layout */
+  --max-width-content:   1280px;
+  --max-width-editorial:  768px;
+  --container-px-mobile:  20px;
+  --container-px-desktop: 32px;
+}
