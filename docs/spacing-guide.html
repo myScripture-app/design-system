@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>myScripture — Spacing Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --background: rgb(249 248 246); --foreground: rgb(33 35 44);
+      --card: rgb(253 253 252); --muted-fg: rgb(108 112 127);
+      --border-color: rgb(226 222 217); --primary: rgb(70 114 93);
+      --sage-light: rgb(231 239 235);
+      --shadow-card: 0 12px 34px rgba(56,48,35,0.06), 0 1px 3px rgba(56,48,35,0.04);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--background); color: var(--foreground); font-family: 'DM Sans', system-ui, sans-serif; padding: 48px 24px; max-width: 860px; margin: 0 auto; }
+    h1 { font-family: 'Lora', Georgia, serif; font-weight: 600; font-size: 2rem; letter-spacing: -0.015em; margin-bottom: 8px; }
+    .subtitle { color: var(--muted-fg); font-size: 15px; margin-bottom: 48px; }
+    .section-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); margin-bottom: 20px; margin-top: 40px; }
+    .spacing-row { display: flex; align-items: center; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--border-color); }
+    .spacing-bar { background: var(--sage-light); border-radius: 4px; height: 24px; flex-shrink: 0; }
+    .spacing-label { min-width: 80px; font-size: 13px; font-weight: 600; }
+    .spacing-value { font-size: 12px; color: var(--muted-fg); font-family: monospace; min-width: 48px; }
+    .spacing-note  { font-size: 12px; color: var(--muted-fg); }
+    .radius-row { display: flex; align-items: center; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--border-color); }
+    .radius-box { width: 48px; height: 36px; background: var(--sage-light); flex-shrink: 0; }
+    .shadow-row { padding: 16px 0; border-bottom: 1px solid var(--border-color); }
+    .shadow-box { width: 120px; height: 48px; background: var(--card); border: 1px solid var(--border-color); border-radius: 10px; margin-bottom: 8px; }
+    .shadow-label { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+    .shadow-value { font-size: 11px; color: var(--muted-fg); font-family: monospace; }
+    .shadow-grid { display: flex; gap: 32px; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+  <p style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--primary);margin-bottom:16px;">Docs</p>
+  <h1>Spacing Guide</h1>
+  <p class="subtitle">4px base unit. All spacing is a multiple of 4. Warm shadows only.</p>
+
+  <p class="section-label">Spacing Scale</p>
+  <div class="spacing-row"><div class="spacing-bar" style="width:4px"></div><span class="spacing-label">Space 1</span><span class="spacing-value">4px</span><span class="spacing-note">Icon gaps, tight inline</span></div>
+  <div class="spacing-row"><div class="spacing-bar" style="width:8px"></div><span class="spacing-label">Space 2</span><span class="spacing-value">8px</span><span class="spacing-note">Compact list items</span></div>
+  <div class="spacing-row"><div class="spacing-bar" style="width:12px"></div><span class="spacing-label">Space 3</span><span class="spacing-value">12px</span><span class="spacing-note">Card internal gaps, chip padding</span></div>
+  <div class="spacing-row"><div class="spacing-bar" style="width:16px"></div><span class="spacing-label">Space 4</span><span class="spacing-value">16px</span><span class="spacing-note">Default padding, card padding (mobile)</span></div>
+  <div class="spacing-row"><div class="spacing-bar" style="width:24px"></div><span class="spacing-label">Space 6</span><span class="spacing-value">24px</span><span class="spacing-note">Card padding (desktop)</span></div>
+  <div class="spacing-row"><div class="spacing-bar" style="width:32px"></div><span class="spacing-label">Space 8</span><span class="spacing-value">32px</span><span class="spacing-note">Major component gaps</span></div>
+  <div class="spacing-row"><div class="spacing-bar" style="width:48px"></div><span class="spacing-label">Space 12</span><span class="spacing-value">48px</span><span class="spacing-note">Section spacers</span></div>
+  <div class="spacing-row"><div class="spacing-bar" style="width:80px"></div><span class="spacing-label">Space 20</span><span class="spacing-value">80px</span><span class="spacing-note">Top-level section vertical padding</span></div>
+
+  <p class="section-label">Border Radius</p>
+  <div class="radius-row"><div class="radius-box" style="border-radius:6px"></div><span class="spacing-label">6px</span><span class="spacing-value">rounded</span><span class="spacing-note">Inline tags</span></div>
+  <div class="radius-row"><div class="radius-box" style="border-radius:8px"></div><span class="spacing-label">8px</span><span class="spacing-value">rounded-lg</span><span class="spacing-note">Inputs, small buttons</span></div>
+  <div class="radius-row"><div class="radius-box" style="border-radius:14px"></div><span class="spacing-label">14px</span><span class="spacing-value">rounded-2xl</span><span class="spacing-note">Standard content cards</span></div>
+  <div class="radius-row"><div class="radius-box" style="border-radius:9999px;width:80px"></div><span class="spacing-label">9999px</span><span class="spacing-value">rounded-full</span><span class="spacing-note">Buttons, chips, badges</span></div>
+
+  <p class="section-label">Shadows (warm undertones only)</p>
+  <div class="shadow-grid">
+    <div class="shadow-row"><div class="shadow-box" style="box-shadow:0 1px 4px rgba(56,48,35,0.06)"></div><p class="shadow-label">shadow-sm</p><p class="shadow-value">0 1px 4px rgba(56,48,35,0.06)</p></div>
+    <div class="shadow-row"><div class="shadow-box" style="box-shadow:0 12px 34px rgba(56,48,35,0.06),0 1px 3px rgba(56,48,35,0.04)"></div><p class="shadow-label">shadow-card</p><p class="shadow-value">0 12px 34px rgba(56,48,35,0.06),<br>0 1px 3px rgba(56,48,35,0.04)</p></div>
+    <div class="shadow-row"><div class="shadow-box" style="box-shadow:0 16px 48px rgba(56,48,35,0.10),0 4px 12px rgba(56,48,35,0.06)"></div><p class="shadow-label">shadow-lg</p><p class="shadow-value">0 16px 48px rgba(56,48,35,0.10),<br>0 4px 12px rgba(56,48,35,0.06)</p></div>
+  </div>
+</body>
+</html>
