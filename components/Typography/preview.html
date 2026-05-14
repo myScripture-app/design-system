@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>myScripture — Typography</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --background: rgb(249 248 246); --foreground: rgb(33 35 44);
+      --card: rgb(253 253 252); --muted-fg: rgb(108 112 127);
+      --border-color: rgb(226 222 217); --primary: rgb(70 114 93);
+      --shadow-card: 0 12px 34px rgba(56,48,35,0.06), 0 1px 3px rgba(56,48,35,0.04);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--background); color: var(--foreground); font-family: 'DM Sans', system-ui, sans-serif; padding: 48px 24px; max-width: 860px; margin: 0 auto; }
+    .page-title { font-family: 'Lora', Georgia, serif; font-size: 2rem; font-weight: 600; letter-spacing: -0.015em; margin-bottom: 8px; }
+    .page-subtitle { color: var(--muted-fg); font-size: 15px; margin-bottom: 48px; }
+    .section { margin-bottom: 48px; }
+    .section-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); margin-bottom: 24px; }
+    .specimen-row { display: flex; align-items: baseline; gap: 24px; padding: 20px 0; border-bottom: 1px solid var(--border-color); }
+    .specimen-meta { min-width: 160px; flex-shrink: 0; }
+    .specimen-meta .name { font-size: 12px; font-weight: 600; color: var(--primary); }
+    .specimen-meta .detail { font-size: 11px; color: var(--muted-fg); margin-top: 2px; line-height: 1.5; }
+    .display-text { font-family: 'Lora', Georgia, serif; font-weight: 600; letter-spacing: -0.015em; font-size: 3.5rem; line-height: 1.15; }
+    .h1-text { font-family: 'Lora', Georgia, serif; font-weight: 600; letter-spacing: -0.015em; font-size: 3rem; line-height: 1.15; }
+    .h2-text { font-family: 'Lora', Georgia, serif; font-weight: 600; letter-spacing: -0.015em; font-size: 2.5rem; line-height: 1.2; }
+    .h3-text { font-family: 'Lora', Georgia, serif; font-weight: 600; letter-spacing: -0.015em; font-size: 1.75rem; line-height: 1.25; }
+    .h4-text { font-family: 'Lora', Georgia, serif; font-weight: 600; letter-spacing: -0.015em; font-size: 1.375rem; line-height: 1.3; }
+    .body-lg { font-family: 'DM Sans', system-ui, sans-serif; font-size: 1.125rem; line-height: 1.7; }
+    .body { font-family: 'DM Sans', system-ui, sans-serif; font-size: 1rem; line-height: 1.7; }
+    .body-sm { font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.875rem; line-height: 1.5; }
+    .ui-label { font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; line-height: 1; }
+    .section-label-demo { font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); }
+    .caption { font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.75rem; line-height: 1.4; color: var(--muted-fg); }
+  </style>
+</head>
+<body>
+  <p class="section-label">Components</p>
+  <h1 class="page-title">Typography</h1>
+  <p class="page-subtitle">Lora for headings (H1–H4). DM Sans for everything else. No third fonts.</p>
+
+  <div class="section">
+    <p class="section-label">Serif — Lora</p>
+    <div class="specimen-row">
+      <div class="specimen-meta"><p class="name">Display</p><p class="detail">Lora 600<br>56px / 1.15<br>-0.015em</p></div>
+      <p class="display-text">A faithful record.</p>
+    </div>
+    <div class="specimen-row">
+      <div class="specimen-meta"><p class="name">H1</p><p class="detail">Lora 600<br>48px / 1.15<br>-0.015em</p></div>
+      <p class="h1-text">Capture sermons.</p>
+    </div>
+    <div class="specimen-row">
+      <div class="specimen-meta"><p class="name">H2</p><p class="detail">Lora 600<br>40px / 1.2<br>-0.015em</p></div>
+      <p class="h2-text">Grow in Scripture.</p>
+    </div>
+    <div class="specimen-row">
+      <div class="specimen-meta"><p class="name">H3</p><p class="detail">Lora 600<br>28px / 1.25<br>-0.015em</p></div>
+      <p class="h3-text">Remember what God is teaching you.</p>
+    </div>
+    <div class="specimen-row">
+      <div class="specimen-meta"><p class="name">H4</p><p class="detail">Lora 600<br>22px / 1.3<br>-0.015em</p></div>
+      <p class="h4-text">Organized by passage, pastor, and series.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="section-label">Sans — DM Sans</p>
+    <div class="specimen-row">
+      <div class="specimen-meta"><p class="name">Body Large</p><p class="detail">DM Sans 400<br>18px / 1.7</p></div>
+      <p class="body-lg">A place to keep what you hear in sermons and what you study in Scripture, organized and searchable.</p>
+    </div>
+    <div class="specimen-row">
+      <div class="specimen-meta"><p class="name">Body</p><p class="detail">DM Sans 400<br>16px / 1.7</p></div>
+      <p class="body">Notes are private by default. Organize by passage, pastor, church, series, and topic. Search your full library at any time.</p>
+    </div>
+    <div class="specimen-row">
+      <div class="specimen-meta"><p class="name">Body Small</p><p class="detail">DM Sans 400<br>14px / 1.5</p></div>
+      <p class="body-sm">Personal application and prayer response sections help you connect what you learn to how you live.</p>
+    </div>
+    <div class="specimen-row">
+      <div class="specimen-meta"><p class="name">UI Label</p><p class="detail">DM Sans 500<br>14px / 1.0</p></div>
+      <p class="ui-label">Save note</p>
+    </div>
+    <div class="specimen-row">
+      <div class="specimen-meta"><p class="name">Section Label</p><p class="detail">DM Sans 600<br>12px uppercase<br>0.1em tracking</p></div>
+      <p class="section-label-demo">Available Now</p>
+    </div>
+    <div class="specimen-row">
+      <div class="specimen-meta"><p class="name">Caption</p><p class="detail">DM Sans 400<br>12px / 1.4<br>muted color</p></div>
+      <p class="caption">Last edited 2 days ago · John 3:16–17</p>
+    </div>
+  </div>
+</body>
+</html>
