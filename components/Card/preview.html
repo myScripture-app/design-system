@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>myScripture — Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --background: rgb(249 248 246); --foreground: rgb(33 35 44);
+      --card: rgb(253 253 252); --card-hover: rgb(246 245 243);
+      --muted-fg: rgb(108 112 127); --border-color: rgb(226 222 217);
+      --primary: rgb(70 114 93); --sage-light: rgb(231 239 235);
+      --warm: rgb(197 132 58); --warm-light: rgb(246 239 228);
+      --navy: rgb(40 57 93); --navy-light: rgb(236 239 245);
+      --shadow-card: 0 12px 34px rgba(56,48,35,0.06), 0 1px 3px rgba(56,48,35,0.04);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--background); color: var(--foreground); font-family: 'DM Sans', system-ui, sans-serif; padding: 48px 24px; max-width: 900px; margin: 0 auto; }
+    h1 { font-family: 'Lora', Georgia, serif; font-weight: 600; font-size: 2rem; letter-spacing: -0.015em; margin-bottom: 8px; }
+    .subtitle { color: var(--muted-fg); font-size: 15px; margin-bottom: 48px; }
+    .section-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); margin-bottom: 16px; margin-top: 40px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+    .card { background: var(--card); border: 1px solid var(--border-color); border-radius: 16px; padding: 24px; box-shadow: var(--shadow-card); transition: transform 0.22s ease, box-shadow 0.22s ease; cursor: pointer; }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 16px 40px rgba(56,48,35,0.10), 0 2px 6px rgba(56,48,35,0.06); }
+    .card-icon { width: 40px; height: 40px; background: var(--sage-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 18px; }
+    .card-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); margin-bottom: 8px; }
+    .card-title { font-family: 'Lora', Georgia, serif; font-size: 1.125rem; font-weight: 600; letter-spacing: -0.015em; margin-bottom: 8px; }
+    .card-desc { font-size: 14px; color: var(--muted-fg); line-height: 1.6; }
+    .empty-card { background: var(--card); border: 1px dashed var(--border-color); border-radius: 16px; padding: 48px 24px; text-align: center; }
+    .empty-icon { font-size: 28px; margin-bottom: 12px; opacity: 0.4; }
+    .empty-title { font-family: 'Lora', Georgia, serif; font-size: 1rem; font-weight: 600; letter-spacing: -0.015em; margin-bottom: 6px; }
+    .empty-desc { font-size: 14px; color: var(--muted-fg); }
+  </style>
+</head>
+<body>
+  <p class="section-label">Components</p>
+  <h1>Card</h1>
+  <p class="subtitle">Ivory background, near-white card surface, warm shadow. Calm lift on hover.</p>
+
+  <p class="section-label">Product Card</p>
+  <div class="grid">
+    <div class="card">
+      <div class="card-icon">📖</div>
+      <p class="card-label">Available Now</p>
+      <h3 class="card-title">myScripture Notes</h3>
+      <p class="card-desc">A focused space for sermon notes, Bible study reflections, and personal application.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🗺</div>
+      <p class="card-label">In Development</p>
+      <h3 class="card-title">myScripture Journey</h3>
+      <p class="card-desc">Track your way through Scripture — chapter by chapter, book by book.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🙏</div>
+      <p class="card-label">Planned</p>
+      <h3 class="card-title">myScripture Pray</h3>
+      <p class="card-desc">Prayer, reflection, and response. Personal prayer lists and answered prayers.</p>
+    </div>
+  </div>
+
+  <p class="section-label">Empty State Card</p>
+  <div style="max-width: 360px;">
+    <div class="empty-card">
+      <div class="empty-icon">📝</div>
+      <h3 class="empty-title">No notes yet</h3>
+      <p class="empty-desc">Your next sermon note is waiting. Start with a passage or a date.</p>
+    </div>
+  </div>
+</body>
+</html>
