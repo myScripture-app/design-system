@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>myScripture — Navbar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --background: rgb(249 248 246); --foreground: rgb(33 35 44);
+      --card: rgb(253 253 252); --muted-fg: rgb(108 112 127);
+      --border-color: rgb(226 222 217); --primary: rgb(70 114 93);
+      --sage-light: rgb(231 239 235);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--background); color: var(--foreground); font-family: 'DM Sans', system-ui, sans-serif; }
+    .section-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); padding: 36px 24px 12px; }
+    h2 { font-family: 'Lora', Georgia, serif; font-weight: 600; font-size: 1.5rem; letter-spacing: -0.015em; padding: 0 24px 24px; }
+    nav {
+      background: rgba(249,248,246,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 0 32px; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; }
+    .nav-logo-icon { width: 32px; height: 32px; background: var(--sage-light); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+    .nav-logo-name { font-family: 'Lora', Georgia, serif; font-size: 1rem; font-weight: 600; color: var(--foreground); letter-spacing: -0.01em; }
+    .nav-links { display: flex; align-items: center; gap: 4px; }
+    .nav-link { color: var(--muted-fg); text-decoration: none; font-size: 14px; font-weight: 500; padding: 6px 12px; border-radius: 8px; transition: color 0.15s, background 0.15s; }
+    .nav-link:hover { color: var(--foreground); background: var(--sage-light); }
+    .nav-link.active { color: var(--primary); }
+    .nav-cta { background: var(--primary); color: white; border: none; border-radius: 9999px; padding: 8px 18px; font-family: 'DM Sans', system-ui, sans-serif; font-size: 13px; font-weight: 500; cursor: pointer; text-decoration: none; }
+    .label { padding: 24px 24px 8px; font-size: 12px; color: var(--muted-fg); }
+    .mobile-note { padding: 16px 24px; background: var(--card); border: 1px solid var(--border-color); margin: 16px 24px; border-radius: 12px; font-size: 14px; color: var(--muted-fg); }
+  </style>
+</head>
+<body>
+  <p class="section-label">Components</p>
+  <h2>Navbar</h2>
+
+  <p class="label">Desktop</p>
+  <nav>
+    <a class="nav-logo" href="#">
+      <div class="nav-logo-icon">📖</div>
+      <span class="nav-logo-name">myScripture</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link active" href="#">Notes</a>
+      <a class="nav-link" href="#">Ecosystem</a>
+      <a class="nav-link" href="#">Roadmap</a>
+      <a class="nav-link" href="#">About</a>
+    </div>
+    <a class="nav-cta" href="#">Get started</a>
+  </nav>
+
+  <div class="mobile-note">
+    Mobile navbar: same logo + hamburger menu icon (right side). Menu slides down as a full-width panel with stacked nav links and CTA button. Background: ivory with warm blur.
+  </div>
+</body>
+</html>
