@@ -29,4 +29,4 @@ Sage green `#46725D` on ivory `#F6EFE5`. Lora headings, DM Sans body. Calm, warm
 
 ---
 
-*Maintained by Riki Morohashi — [myscripture.app](https://myscripture.app)*
+*Maintained by Riki Morohashi — [myscripture.app](https://myscripture.app) · [GitHub](https://github.com/rikim811/myscripture-design-system)*
