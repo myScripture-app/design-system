@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>myScripture — Button</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --background: rgb(249 248 246); --foreground: rgb(33 35 44);
+      --card: rgb(253 253 252); --muted-fg: rgb(108 112 127);
+      --border-color: rgb(226 222 217); --primary: rgb(70 114 93);
+      --primary-hover: rgb(57 96 78); --sage-light: rgb(231 239 235);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--background); color: var(--foreground); font-family: 'DM Sans', system-ui, sans-serif; padding: 48px 24px; max-width: 860px; margin: 0 auto; }
+    h1 { font-family: 'Lora', Georgia, serif; font-weight: 600; font-size: 2rem; letter-spacing: -0.015em; margin-bottom: 8px; }
+    .subtitle { color: var(--muted-fg); font-size: 15px; margin-bottom: 48px; }
+    .section-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); margin-bottom: 16px; margin-top: 40px; }
+    .row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-bottom: 8px; }
+    .btn-primary { background: var(--primary); color: white; border: none; border-radius: 9999px; padding: 10px 20px; font-family: 'DM Sans', system-ui, sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; transition: background 0.15s ease; }
+    .btn-primary:hover { background: var(--primary-hover); }
+    .btn-primary:disabled { opacity: 0.45; cursor: not-allowed; }
+    .btn-primary.sm { padding: 7px 14px; font-size: 13px; }
+    .btn-primary.lg { padding: 13px 28px; font-size: 15px; }
+    .btn-secondary { background: transparent; color: var(--primary); border: 1px solid rgba(70,114,93,0.3); border-radius: 9999px; padding: 10px 20px; font-family: 'DM Sans', system-ui, sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; transition: background 0.15s ease, border-color 0.15s ease; }
+    .btn-secondary:hover { background: var(--sage-light); border-color: rgba(70,114,93,0.5); }
+    .btn-secondary:disabled { opacity: 0.45; cursor: not-allowed; }
+    .btn-ghost { background: transparent; color: var(--primary); border: none; border-radius: 9999px; padding: 10px 20px; font-family: 'DM Sans', system-ui, sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; transition: background 0.15s ease; }
+    .btn-ghost:hover { background: var(--sage-light); }
+    .btn-destructive { background: #DC2626; color: white; border: none; border-radius: 9999px; padding: 10px 20px; font-family: 'DM Sans', system-ui, sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; transition: background 0.15s ease; }
+    .btn-destructive:hover { background: #B91C1C; }
+  </style>
+</head>
+<body>
+  <p class="section-label">Components</p>
+  <h1>Button</h1>
+  <p class="subtitle">Pill shape always. Sage primary. No harsh shadows.</p>
+
+  <p class="section-label">Primary</p>
+  <div class="row">
+    <button class="btn-primary sm">Small</button>
+    <button class="btn-primary">Default</button>
+    <button class="btn-primary lg">Large</button>
+    <button class="btn-primary" disabled>Disabled</button>
+  </div>
+
+  <p class="section-label">Secondary</p>
+  <div class="row">
+    <button class="btn-secondary sm">Small</button>
+    <button class="btn-secondary">Default</button>
+    <button class="btn-secondary lg">Large</button>
+    <button class="btn-secondary" disabled>Disabled</button>
+  </div>
+
+  <p class="section-label">Ghost</p>
+  <div class="row">
+    <button class="btn-ghost">Learn more</button>
+    <button class="btn-ghost">View all</button>
+  </div>
+
+  <p class="section-label">Destructive</p>
+  <div class="row">
+    <button class="btn-destructive">Delete note</button>
+  </div>
+</body>
+</html>
