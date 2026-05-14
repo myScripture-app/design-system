@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>myScripture — Chip</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --background: rgb(249 248 246); --foreground: rgb(33 35 44);
+      --muted-fg: rgb(108 112 127); --border-color: rgb(226 222 217);
+      --primary: rgb(70 114 93); --sage-light: rgb(231 239 235);
+      --warm: rgb(197 132 58); --warm-light: rgb(246 239 228);
+      --navy: rgb(40 57 93); --navy-light: rgb(236 239 245);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--background); color: var(--foreground); font-family: 'DM Sans', system-ui, sans-serif; padding: 48px 24px; max-width: 860px; margin: 0 auto; }
+    h1 { font-family: 'Lora', Georgia, serif; font-weight: 600; font-size: 2rem; letter-spacing: -0.015em; margin-bottom: 8px; }
+    .subtitle { color: var(--muted-fg); font-size: 15px; margin-bottom: 48px; }
+    .section-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); margin-bottom: 16px; margin-top: 36px; }
+    .row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; }
+    .chip { display: inline-flex; align-items: center; gap: 5px; padding: 4px 12px; border-radius: 9999px; font-size: 13px; font-weight: 500; }
+    .chip-sage   { background: var(--sage-light); color: var(--primary); border: 1px solid rgba(70,114,93,0.18); }
+    .chip-amber  { background: var(--warm-light);  color: var(--warm);    border: 1px solid rgba(197,132,58,0.2); }
+    .chip-navy   { background: var(--navy-light);  color: var(--navy);    border: 1px solid rgba(40,57,93,0.15); }
+    .chip-muted  { background: rgb(241 240 238);   color: var(--muted-fg); border: 1px solid var(--border-color); }
+    .dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+    .dot-sage  { background: var(--primary); }
+    .dot-amber { background: var(--warm); }
+    .dot-navy  { background: var(--navy); }
+    .dot-muted { background: var(--muted-fg); }
+  </style>
+</head>
+<body>
+  <p class="section-label">Components</p>
+  <h1>Chip</h1>
+  <p class="subtitle">Pill-shaped. Four color variants. Used for status, tags, and category labels.</p>
+
+  <p class="section-label">Color Variants</p>
+  <div class="row">
+    <span class="chip chip-sage">Sage</span>
+    <span class="chip chip-amber">Amber</span>
+    <span class="chip chip-navy">Navy</span>
+    <span class="chip chip-muted">Muted</span>
+  </div>
+
+  <p class="section-label">Status Chips (Product Roadmap)</p>
+  <div class="row">
+    <span class="chip chip-sage"><span class="dot dot-sage"></span>Available now</span>
+    <span class="chip chip-amber"><span class="dot dot-amber"></span>In development</span>
+    <span class="chip chip-navy"><span class="dot dot-navy"></span>Planned</span>
+    <span class="chip chip-muted"><span class="dot dot-muted"></span>Future service</span>
+  </div>
+
+  <p class="section-label">Topic / Tag Chips</p>
+  <div class="row">
+    <span class="chip chip-sage">John 3:16</span>
+    <span class="chip chip-navy">Sermon</span>
+    <span class="chip chip-amber">Prayer</span>
+    <span class="chip chip-navy">Bible study</span>
+    <span class="chip chip-muted">Personal</span>
+  </div>
+</body>
+</html>
